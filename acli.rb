@@ -5,12 +5,12 @@
 class Acli < Formula
   desc "Manage content in multi platforms."
   homepage "https://github.com/k8scat/articli"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.2.2/acli-darwin-amd64.tar.gz"
-      sha256 "ff9dc6d4608b315da41874ad68758ab68e7a7b508c75825a1d6d014c0ad50c65"
+      url "https://github.com/k8scat/articli/releases/download/v0.2.3/acli-darwin-amd64.tar.gz"
+      sha256 "81b70f3446a3f5e52dede043ed2f485f3b55b55bc2931ad12d108c0d9a0f79ac"
 
       def install
         bin.install "acli"
@@ -23,8 +23,8 @@ class Acli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8scat/articli/releases/download/v0.2.2/acli-darwin-arm64.tar.gz"
-      sha256 "c04aad6e2ca3ccf1d902d0f4f2bbc4422c67fa355a166cc3b0dac2fd9f420151"
+      url "https://github.com/k8scat/articli/releases/download/v0.2.3/acli-darwin-arm64.tar.gz"
+      sha256 "81990e2dcfea16d97e694ad57bad50e01fda61e476560359c50ad14ac8b6a8a3"
 
       def install
         bin.install "acli"
@@ -40,8 +40,8 @@ class Acli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8scat/articli/releases/download/v0.2.2/acli-linux-arm64.tar.gz"
-      sha256 "0860b69e662dd422f5ac132608c83013735b3292e21969d7b72b89a5547ff8d7"
+      url "https://github.com/k8scat/articli/releases/download/v0.2.3/acli-linux-arm64.tar.gz"
+      sha256 "5966b7387884265344d4690bf3281808de3b3da3b559feeb7889088551bd9ff1"
 
       def install
         bin.install "acli"
@@ -54,8 +54,8 @@ class Acli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.2.2/acli-linux-amd64.tar.gz"
-      sha256 "ea49fdf56cdd675a33fbdd2e7478fbf2ee5a66b97c255ab3c9dcdf43b1eb9e2d"
+      url "https://github.com/k8scat/articli/releases/download/v0.2.3/acli-linux-amd64.tar.gz"
+      sha256 "c6636a0c354f21ce5acc184b3fa6c42145ef567cc5b43db498fc1027d26fc2f7"
 
       def install
         bin.install "acli"
