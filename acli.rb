@@ -5,12 +5,12 @@
 class Acli < Formula
   desc "Manage content in multi platforms."
   homepage "https://github.com/k8scat/articli"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/k8scat/articli/releases/download/v0.3.2/acli-darwin-arm64.tar.gz"
-      sha256 "bbbbef089ef745f3181f70b0c907b27e3cabd4c78bbe12c893eb0d983814e88a"
+    if Hardware::CPU.intel?
+      url "https://github.com/k8scat/articli/releases/download/v0.3.3/acli-darwin-amd64.tar.gz"
+      sha256 "6ac893fb1b0e448e83fbf53c3835f0d014061025d6612367811c0c9bd6a557be"
 
       def install
         bin.install "acli"
@@ -22,9 +22,9 @@ class Acli < Formula
         (zsh_completion/"_acli").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.3.2/acli-darwin-amd64.tar.gz"
-      sha256 "13de54873b4ad9471873fe5e6ad21fa5732d26b4fe9a70a1b3a1fddc40027df0"
+    if Hardware::CPU.arm?
+      url "https://github.com/k8scat/articli/releases/download/v0.3.3/acli-darwin-arm64.tar.gz"
+      sha256 "ba4b9013a4e46421081f018aa4497f8d109a6305a3b67a3d1e1e4ee259bc8b00"
 
       def install
         bin.install "acli"
@@ -39,9 +39,9 @@ class Acli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.3.2/acli-linux-amd64.tar.gz"
-      sha256 "ee97b13973a8af2e22cb9c65d4f653af8c7bbcbfb7808373c52758a87f16d964"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/k8scat/articli/releases/download/v0.3.3/acli-linux-arm64.tar.gz"
+      sha256 "aad9e90db9ecb12be56025bd673b9e1896bd96aad8c3e02c4bf1f4dbdb43b22b"
 
       def install
         bin.install "acli"
@@ -53,9 +53,9 @@ class Acli < Formula
         (zsh_completion/"_acli").write output
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8scat/articli/releases/download/v0.3.2/acli-linux-arm64.tar.gz"
-      sha256 "c8b211f9f642b62dc6a1c001cafbcda8bedc8eb892bab43d86dd766b85a6cab7"
+    if Hardware::CPU.intel?
+      url "https://github.com/k8scat/articli/releases/download/v0.3.3/acli-linux-amd64.tar.gz"
+      sha256 "0c0aeb812cadadc7c3092c5cbb0208f941ce90604251146ec836775e4f09aa25"
 
       def install
         bin.install "acli"
