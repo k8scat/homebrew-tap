@@ -5,12 +5,12 @@
 class Acli < Formula
   desc "Manage content in multi platforms."
   homepage "https://github.com/k8scat/articli"
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.4.0/acli-darwin-amd64.tar.gz"
-      sha256 "f32f3ee2d330d98df32a16fd3cc3b3db3bc58c00e2ef8b19a6b25845900552a0"
+      url "https://github.com/k8scat/articli/releases/download/v0.4.1/acli-darwin-amd64.tar.gz"
+      sha256 "217dd8d8d72464fa258dd61fc01f820723efe759ba977d3b1064bee2e4f24149"
 
       def install
         bin.install "acli"
@@ -23,8 +23,8 @@ class Acli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k8scat/articli/releases/download/v0.4.0/acli-darwin-arm64.tar.gz"
-      sha256 "10fc9454dec3cb6d5cf7fa6fa5d3d87711d8a7c0bc04e1770497a5f03349fd1c"
+      url "https://github.com/k8scat/articli/releases/download/v0.4.1/acli-darwin-arm64.tar.gz"
+      sha256 "860dfbefb927ef9865996ce280d42b43f243c72ff5008176d3c9f241d1a7fc2f"
 
       def install
         bin.install "acli"
@@ -39,9 +39,9 @@ class Acli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8scat/articli/releases/download/v0.4.0/acli-linux-arm64.tar.gz"
-      sha256 "d6b16415136b2c604cb559884d49b54e4444aebe97894060179403de1c0f975a"
+    if Hardware::CPU.intel?
+      url "https://github.com/k8scat/articli/releases/download/v0.4.1/acli-linux-amd64.tar.gz"
+      sha256 "c94cd8986ad99cacef7b81196535adf5210636382c9214ce7e41f01530c3d703"
 
       def install
         bin.install "acli"
@@ -53,9 +53,9 @@ class Acli < Formula
         (zsh_completion/"_acli").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.4.0/acli-linux-amd64.tar.gz"
-      sha256 "8da23c902b648f74ff3262d9d076aad047f882140e2aeed5f933ec49c8a14dde"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/k8scat/articli/releases/download/v0.4.1/acli-linux-arm64.tar.gz"
+      sha256 "4c316b9f56a29646829aed7830456cc74e3a514c177f53ad365313700fb0219f"
 
       def install
         bin.install "acli"
