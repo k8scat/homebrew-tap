@@ -5,14 +5,14 @@
 class Acli < Formula
   desc "Manage content in multi platforms."
   homepage "https://github.com/k8scat/articli"
-  version "0.6.4"
+  version "0.6.5"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/k8scat/articli/releases/download/v0.6.4/articli_0.6.4_darwin_arm64.tar.gz"
-      sha256 "11cb9af27db03b8a1c150a4aef74ae127e93850672fb4f1e8a715b1f97adcb98"
+      url "https://github.com/k8scat/articli/releases/download/v0.6.5/articli_0.6.5_darwin_arm64.tar.gz"
+      sha256 "d83ce57669c7192fd81477d30b6ef0b9693ac9b486d7f237e52a99864d81ed92"
 
       def install
         bin.install "acli"
@@ -25,8 +25,8 @@ class Acli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.6.4/articli_0.6.4_darwin_amd64.tar.gz"
-      sha256 "7d63fd65c5af480fa6623a8c9438b756db6cd90b998772bcac8b8ae626b97f17"
+      url "https://github.com/k8scat/articli/releases/download/v0.6.5/articli_0.6.5_darwin_amd64.tar.gz"
+      sha256 "7fb5fbc42349468abd7a723880bca4d383f0b646dbc05d1c6963419dc8c89eff"
 
       def install
         bin.install "acli"
@@ -42,8 +42,8 @@ class Acli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k8scat/articli/releases/download/v0.6.4/articli_0.6.4_linux_arm64.tar.gz"
-      sha256 "63729522cdc458560cca2aa3b7983cde5cee0341a19167c50ffeab84c9798a5a"
+      url "https://github.com/k8scat/articli/releases/download/v0.6.5/articli_0.6.5_linux_arm64.tar.gz"
+      sha256 "c51fcd8ef6206dac5c24ca05bcc57a99efca59ebd02303c69f58d209a95c48fc"
 
       def install
         bin.install "acli"
@@ -56,8 +56,8 @@ class Acli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/k8scat/articli/releases/download/v0.6.4/articli_0.6.4_linux_amd64.tar.gz"
-      sha256 "fca5b5869df0c818efc8c74bf326002d9a663be3f3beb119da4ae2e6dca53d85"
+      url "https://github.com/k8scat/articli/releases/download/v0.6.5/articli_0.6.5_linux_amd64.tar.gz"
+      sha256 "237657857dede9eb32670aa921d046d5f8d94306619261119b778361ca7b5c1f"
 
       def install
         bin.install "acli"
